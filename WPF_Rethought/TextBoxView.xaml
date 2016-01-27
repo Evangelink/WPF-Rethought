@@ -12,9 +12,6 @@
     >
     <StackPanel>
         <TextBox x:Name="txtTest" />
-        <TextBlock>
-            <Run Text="You have typed:" />
-            <Run Text="{rx:ReactiveBinding Path=Text}" />
-        </TextBlock>
+        <TextBlock Text="{rx:ReactiveBinding Path=Text}" />
     </StackPanel>
 </UserControl>

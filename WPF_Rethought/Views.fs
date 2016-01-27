@@ -31,7 +31,7 @@ type TimerViewProvider () =
         {
             Cursor = CreateCursor ApplicationState.Timer_
             EventStreams = fun (view : TimerView) ->
-                [ TimeSpan(0,0,1) |> Observable.interval |> Observable.map (fun _ -> DateTime.Now) ]
+                [ TimeSpan(0,1,0) |> Observable.interval |> Observable.map (fun _ -> DateTime.Now) ]
             Update = fun state event -> {state with Time = event }
         })
 
